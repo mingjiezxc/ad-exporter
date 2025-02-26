@@ -1,0 +1,25 @@
+version: "2.4"
+
+networks:
+  default:
+    external: true
+    name: share
+
+
+services:
+
+  ad-console:
+    image: debian:latest
+    container_name: ad-console
+    hostname: ad-console
+    restart: unless-stopped
+    ports:
+      - 8082:8082
+    working_dir: /app
+    volumes:
+      - ./:/app/
+    command:
+      - ./ad-monitor
+
+
+

@@ -1,0 +1,19 @@
+# 监控间隔
+Interval: 10
+# 指标前缀
+MetricPrefix: ad_
+# 服务地址 & 帐号密码
+Url: https://xxxx
+User:  readonly
+Password: 123@abc#
+
+# 将 API 转换成指标
+Paths:
+  - Path: /api/lb/current-version/stat/slb/virtual-service
+    PathName: virtual-service
+  - Path: /api/lb/current-version/stat/slb/service-host
+    PathName: current-version
+  - Path: /api/lb/current-version/stat/slb/pool
+    PathName: pool
+  - Path: /api/lb/current-version/stat/sys/system
+    PathName: system
