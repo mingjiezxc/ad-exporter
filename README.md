@@ -37,5 +37,6 @@
 ```bash
 git clone https://github.com/mingjiezxc/ad-exporter.git
 cd ad-exporter
+chmod +x ad-exporter
 docker-compose up -d
 ```
